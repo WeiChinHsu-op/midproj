@@ -1,5 +1,5 @@
-BUILD/K66F/GCC_ARM-TFLITE/main.o: main.cpp \
- BUILD/K66F/GCC_ARM-TFLITE/mbed_config.h accelerometer_handler.h \
+../BUILD/K66F/GCC_ARM-TFLITE/main.o: main.cpp \
+ ../BUILD/K66F/GCC_ARM-TFLITE/mbed_config.h accelerometer_handler.h \
  tensorflowlite_mbed/tensorflow/lite/c/common.h \
  tensorflowlite_mbed/tensorflow/lite/micro/micro_error_reporter.h \
  tensorflowlite_mbed/tensorflow/lite/core/api/error_reporter.h \
