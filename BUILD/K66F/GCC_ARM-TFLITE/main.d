@@ -1,12 +1,28 @@
-../BUILD/K66F/GCC_ARM-TFLITE/main.o: main.cpp \
- ../BUILD/K66F/GCC_ARM-TFLITE/mbed_config.h accelerometer_handler.h \
- tensorflowlite_mbed/tensorflow/lite/c/common.h \
- tensorflowlite_mbed/tensorflow/lite/micro/micro_error_reporter.h \
- tensorflowlite_mbed/tensorflow/lite/core/api/error_reporter.h \
- tensorflowlite_mbed/tensorflow/lite/micro/compatibility.h \
- tensorflowlite_mbed/tensorflow/lite/micro/debug_log.h \
- tensorflowlite_mbed/tensorflow/lite/micro/debug_log_numbers.h config.h \
- magic_wand_model_data.h /home/ee2405/ee2405/mbed-os/mbed.h \
+BUILD/K66F/GCC_ARM-TFLITE/main.o: main.cpp \
+ BUILD/K66F/GCC_ARM-TFLITE/mbed_config.h DA7212/DA7212.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/TARGET_FRDM/fsl_clock_config.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_common.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/device/fsl_device_registers.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/device/MK66F18.h \
+ /home/ee2405/ee2405/mbed-os-build/cmsis/TARGET_CORTEX_M/core_cm4.h \
+ /home/ee2405/ee2405/mbed-os-build/cmsis/TARGET_CORTEX_M/cmsis_version.h \
+ /home/ee2405/ee2405/mbed-os-build/cmsis/TARGET_CORTEX_M/cmsis_compiler.h \
+ /home/ee2405/ee2405/mbed-os-build/cmsis/TARGET_CORTEX_M/cmsis_gcc.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/device/system_MK66F18.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/device/MK66F18_features.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_clock.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_common.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_dmamux.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_edma.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_gpio.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_i2c.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_lmem_cache.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_port.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_sai.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_sai_edma.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_sai.h \
+ /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_edma.h \
+ /home/ee2405/ee2405/mbed-os/mbed.h \
  /home/ee2405/ee2405/mbed-os/platform/mbed_version.h \
  /home/ee2405/ee2405/mbed-os/rtos/rtos.h \
  /home/ee2405/ee2405/mbed-os/rtos/mbed_rtos_storage.h \
@@ -60,13 +76,6 @@
  /home/ee2405/ee2405/mbed-os-build/platform/mbed_atomic.h \
  /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/device/cmsis.h \
  /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/device/fsl_device_registers.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/device/MK66F18.h \
- /home/ee2405/ee2405/mbed-os-build/cmsis/TARGET_CORTEX_M/core_cm4.h \
- /home/ee2405/ee2405/mbed-os-build/cmsis/TARGET_CORTEX_M/cmsis_version.h \
- /home/ee2405/ee2405/mbed-os-build/cmsis/TARGET_CORTEX_M/cmsis_compiler.h \
- /home/ee2405/ee2405/mbed-os-build/cmsis/TARGET_CORTEX_M/cmsis_gcc.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/device/system_MK66F18.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/device/MK66F18_features.h \
  /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/device/cmsis_nvic.h \
  /home/ee2405/ee2405/mbed-os-build/platform/cxxsupport/mstd_type_traits \
  /home/ee2405/ee2405/mbed-os-build/platform/cxxsupport/mstd_cstddef \
@@ -83,12 +92,8 @@
  /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/TARGET_FRDM/PeripheralNames.h \
  /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/TARGET_FRDM/PinNames.h \
  /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_flash.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_common.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/device/fsl_device_registers.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_clock.h \
  /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/api/dma_api_hal.h \
  /home/ee2405/ee2405/mbed-os-build/hal/dma_api.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_edma.h \
  /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/api/gpio_object.h \
  /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/us_ticker_defines.h \
  /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_pit.h \
@@ -244,19 +249,14 @@
  /home/ee2405/ee2405/mbed-os/platform/mbed_stats.h \
  /home/ee2405/ee2405/mbed-os/platform/Callback.h \
  /home/ee2405/ee2405/mbed-os/platform/FunctionPointer.h \
- /home/ee2405/ee2405/mbed-os/platform/ScopedLock.h DA7212/DA7212.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/TARGET_FRDM/fsl_clock_config.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_common.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_dmamux.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_gpio.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_i2c.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_lmem_cache.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_port.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_sai.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_sai_edma.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_sai.h \
- /home/ee2405/ee2405/mbed-os-build/targets/TARGET_Freescale/TARGET_MCUXpresso_MCUS/TARGET_K66F/drivers/fsl_edma.h \
- 4DGL-uLCD-SE/uLCD_4DGL.h \
+ /home/ee2405/ee2405/mbed-os/platform/ScopedLock.h \
+ accelerometer_handler.h tensorflowlite_mbed/tensorflow/lite/c/common.h \
+ tensorflowlite_mbed/tensorflow/lite/micro/micro_error_reporter.h \
+ tensorflowlite_mbed/tensorflow/lite/core/api/error_reporter.h \
+ tensorflowlite_mbed/tensorflow/lite/micro/compatibility.h \
+ tensorflowlite_mbed/tensorflow/lite/micro/debug_log.h \
+ tensorflowlite_mbed/tensorflow/lite/micro/debug_log_numbers.h config.h \
+ magic_wand_model_data.h 4DGL-uLCD-SE/uLCD_4DGL.h \
  tensorflowlite_mbed/tensorflow/lite/micro/kernels/micro_ops.h \
  tensorflowlite_mbed/tensorflow/lite/micro/micro_interpreter.h \
  tensorflowlite_mbed/tensorflow/lite/core/api/op_resolver.h \

@@ -37,6 +37,11 @@ bool got_data = false;
 constexpr int kTensorArenaSize = 60 * 1024;
 uint8_t tensor_arena[kTensorArenaSize];
 
+bool should_clear_buffer1 = false;
+bool got_data1 = false;
+constexpr int kTensorArenaSize1 = 60 * 1024;
+uint8_t tensor_arena1[kTensorArenaSize1];
+
 int nowsong=2 ;
 int gesture_index_taiko = 0;
 int gesture_index = 0;
@@ -275,6 +280,8 @@ int PredictGesture(float* output) {
 }
 
 void taiko1(){
+    uLCD.cls();
+    uLCD.reset();
     uLCD.background_color(WHITE);
     uLCD.textbackground_color(WHITE);
     uLCD.color(BLUE);
@@ -283,7 +290,7 @@ void taiko1(){
     uLCD.text_height(1);
     uLCD.printf("%s\n",songs);
 
-    uLCD.printf("playing");
+    //uLCD.printf("playing");
   for(int i = 0; i < 48 ; i++)
   {
     int length = noteLength2[i];
@@ -398,7 +405,7 @@ int ML_acc_song(){
             nowsong--;
           //pc.printf("nowsong :%d",nowsong);
           //pc.printf("%d",nowsong);
-          uLCD.locate(1,10);
+          uLCD.locate(1,11);
           uLCD.printf("nowsong: %d\r\n",nowsong+1);
         }
         if(gesture_index==2){
@@ -408,7 +415,7 @@ int ML_acc_song(){
             nowsong++;
           //pc.printf("nowsong :%d",nowsong); 
           //pc.printf("%d",nowsong);
-          uLCD.locate(1,10);
+          uLCD.locate(1,11);
           uLCD.printf("nowsong: %d\r\n",nowsong+1);
         }
       //pc.printf("I'm here"); 
@@ -485,12 +492,12 @@ int ML_acc(){
      uLCD.cls();
      uLCD.reset();
      uLCD.locate(1,0);
-     uLCD.printf("your score : %d\n",score);
+     uLCD.printf("your score : %d\n",score/15);
      uLCD.locate(1,1);
      char songs[] = "1.sheep\n2.bee\n3.tiger";
      uLCD.printf("%s\n",songs);
      uLCD.locate(1,5);
-     uLCD.printf("1.back\n2.forward\n3.change\n");
+     uLCD.printf("0.back\n1.forward\n2.change\n3.taiko\n");
 
    while (true) {
       
@@ -528,7 +535,7 @@ int ML_acc(){
           else
             mode--;
           //pc.printf("%d",mode);
-          uLCD.locate(1,9);
+          uLCD.locate(1,10);
           uLCD.printf("mode: %d",mode);
         }
         if(gesture_index==2){
@@ -537,7 +544,7 @@ int ML_acc(){
           else
             mode++;
           //pc.printf("%d\r\n",mode);
-          uLCD.locate(1,9);
+          uLCD.locate(1,10);
           uLCD.printf("mode: %d",mode);
         }   
       //pc.printf("I'm here"); 
@@ -585,7 +592,7 @@ void ML_acc_taiko(){
                                  tflite::ops::micro::Register_RESHAPE(), 1);
    // Build an interpreter to run the model with
    static tflite::MicroInterpreter static_interpreter(
-       model, micro_op_resolver, tensor_arena, kTensorArenaSize, error_reporter);
+       model, micro_op_resolver, tensor_arena1, kTensorArenaSize1, error_reporter);
    tflite::MicroInterpreter* interpreter = &static_interpreter;
 
    // Allocate memory from the tensor_arena for the model's tensors
@@ -614,13 +621,13 @@ void ML_acc_taiko(){
   while (true) {
       
      // Attempt to read new data from the accelerometer
-     got_data = ReadAccelerometer(error_reporter, model_input->data.f,
-                                  input_length, should_clear_buffer);
+     got_data1 = ReadAccelerometer(error_reporter, model_input->data.f,
+                                  input_length, should_clear_buffer1);
  
      // If there was no new data,
      // don't try to clear the buffer again and wait until next time
-     if (!got_data) {
-       should_clear_buffer = false;
+     if (!got_data1) {
+       should_clear_buffer1 = false;
        continue;
      }
  
@@ -635,7 +642,7 @@ void ML_acc_taiko(){
      gesture_index_taiko = PredictGesture(interpreter->output(0)->data.f);
  
      // Clear the buffer next time we read data
-     should_clear_buffer = gesture_index_taiko < label_num;
+     should_clear_buffer1 = gesture_index_taiko < label_num;
  
      
     count++;
@@ -661,15 +668,15 @@ void ML_acc_taiko(){
    
   for(int i=0;i<48;i++){
     if(abstaiko[i]==answer[i]){
-      score = score+2;
+      score = score+1;
     }
   }
   countscore++;
-  if(countscore==1){
-    uLCD.locate(1,9);
-    uLCD.printf("your score : %d\n",score);
-  }
-  wait(5.0);
+  //if(countscore==1){
+    //uLCD.locate(1,9);
+    //uLCD.printf("your score : %d\n",score);
+  //}
+  //wait(5.0);
    //pc.printf("your score : %d",score);
 }
 
